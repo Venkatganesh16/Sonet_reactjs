@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light" id="navbar">
+        <a class="navbar-brand" href="#">
+          <img src="react.png" width="70" height="50" class="d-inline-block align-top" alt="">
+          <b>Sonet-React.js</b>&nbsp; 
+          <div>
+              <form>
+                change navbar color  
+                <input type="color" id="favcolor4" name="favcolor4" value="#ff0000">
+                <a type="button" href="#" class="btn btn-success" type="submit" onclick="nav()">Click Here</a>
+              </form>
+          </div>
+        </a>
+      </nav>
+    <div class="row" style=" margin-top: 10%;">  
+        <div class="col-4 offset-3">
+            <h1 id="h1">This text is in h1 tag</h1>
+        </div>
+        <div class="col-3">
+            <form action="/action_page.php">
+                <input type="color" id="favcolor" name="favcolor1" value="#ff0000"> &nbsp; &nbsp; &nbsp;
+                <a type="button" href="#" class="btn btn-success" type="submit" onclick="h1()">Click Here</a> 
+              </form>
+        </div>
+    </div>
+    <div class="row" style=" margin-top: 2%;">
+        <div class="col-4 offset-3">
+            <p id="p"><b>This text is in p tag</b></p>
+        </div>
+        <div class="col-3">
+            <input type="color" id="favcolor2" name="favcolor1" value="#ff0000"> &nbsp; &nbsp; &nbsp;
+                <a type="button" href="#" class="btn btn-success" type="submit" onclick="p()">Click Here</a> 
+        </div>
+    </div>
+    <div class="row" style=" margin-top: 2%;">
+        <div class="col-4 offset-3">
+            <h4 id="h4">To change the page background color</h1>
+        </div>
+        <div class="col-3">
+            <form action="/action_page.php">
+                <input type="color" id="favcolor3" name="favcolor1" value="#ff0000"> &nbsp; &nbsp; &nbsp;
+                <a type="button" href="#" class="btn btn-success" type="submit" onclick="body1()">Click Here</a> 
+              </form>
+        </div>
+    </div>
+    <div class="row" style=" margin-top: 2%;">
+        <div class="col-4 offset-3">
+            <h4 id="h4">To insert the page background image</h1>
+        </div>
+        <div class="col-3">
+            <form action="/action_page.php">
+                <input id="myInput" type="text" /> &nbsp; &nbsp; &nbsp;
+                <a type="button" href="#" class="btn btn-success" type="submit" onclick="image()">Click Here</a> 
+              </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function h1() {
+            let color = document.getElementById("favcolor1").value
+            document.getElementById("h1").style.color = color;
+        }
+        function p() {
+            let color = document.getElementById("favcolor2").value
+            document.getElementById("p").style.color = color;
+        }
+        function body1() {
+            let color = document.getElementById("favcolor3").value
+            document.body.style.backgroundColor = color;
+        }
+        function image() {
+            input = document.getElementById ("myInput").value;
+            document.body.style.backgroundImage = "url('" + input + "')";
+            document.body.style.backgroundRepeat = "no-repeat";
+            document.body.style.backgroundSize = "cover";
+        }
+        function nav() {
+            let color = document.getElementById("favcolor4").value
+            document.getElementById("navbar").style.backgroundColor = color;
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
