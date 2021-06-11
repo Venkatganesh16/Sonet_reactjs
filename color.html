@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-    <nav class="navbar navbar-light bg-light" id="navbar">
+    <nav class="navbar navbar-light" id="navbar">
         <a class="navbar-brand" href="#">
           <img src="react.png" width="70" height="50" class="d-inline-block align-top" alt="">
           <b>Sonet-React.js</b>&nbsp; 
@@ -27,7 +27,7 @@
         </div>
         <div class="col-3">
             <form action="/action_page.php">
-                <input type="color" id="favcolor" name="favcolor1" value="#ff0000"> &nbsp; &nbsp; &nbsp;
+                <input type="color" id="favcolor1" name="favcolor1" value="#ff0000"> &nbsp; &nbsp; &nbsp;
                 <a type="button" href="#" class="btn btn-success" type="submit" onclick="h1()">Click Here</a> 
               </form>
         </div>
@@ -84,7 +84,7 @@
         }
         function nav() {
             let color = document.getElementById("favcolor4").value
-            document.getElementById("navbar").style.backgroundColor = color;
+            document.getElementById("navbar").style.backgroundColor = color
         }
     </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
