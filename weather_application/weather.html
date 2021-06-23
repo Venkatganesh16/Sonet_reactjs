@@ -46,7 +46,7 @@
 }
 
 /* CLOUDY */
-.Haze {
+.Clouds {
 	animation: cloudy 5s ease-in-out infinite;
 	background: #FFFFFF;
 	border-radius: 50%;
@@ -61,7 +61,7 @@
 	position: absolute;
 	top: 70px; 
 }
-.Haze:after {
+.Clouds:after {
 	animation: cloudy_shadow 5s ease-in-out infinite;
 	background: #000000;
 	border-radius: 50%;
@@ -74,10 +74,10 @@
 	bottom: -60px;
   transform: scale(1);
 }
-@keyframes Haze {
+@keyframes Clouds {
 	50% { transform: translateY(-20px); }
 }
-@keyframes Haze_shadow {
+@keyframes Clouds_shadow {
 	50% { transform: translateY(20px) scale(.7); opacity:.05; }
 }
 
@@ -392,6 +392,33 @@
 			#EEEEEE 90px 35px;
 	}
 }
+.Haze{
+  background: #33495f;
+  position: absolute;
+  width: 200px;
+  height: 45px;
+  z-index: 6;
+  opacity: 0;
+  animation: Haze 10s 0s linear infinite;
+}
+
+.Haze_stripe{
+  background: #a3b5c7;
+  position: absolute;
+  width: 115px;
+  height: 10px;
+  z-index: 17;
+  opacity: 0;
+  border-radius: 360px;
+  animation: Haze_stripe 10s 0.1s linear infinite;
+}
+
+.Haze_stripe:nth-child(6){
+  animation: Haze_stripe 10s 0.2s linear infinite;
+}
+.Haze_stripe:last-child{
+  animation: Haze_stripe 10s 0.4s linear infinite;
+}
     </style>
     <script>
         function weather() {
@@ -411,7 +438,7 @@
                     var visibility = data.visibility;
                     var text = 
                     `
-                    <div class="card row offset-2 col-6 bg-light" style="margin-bottom: 2%">
+                    <div class="card row offset-2 col-6" style="margin-bottom: 2%; background-color: #C0C0C0">
                         <div class="col-6">
                             <div class="row" style="border-bottom: 2px solid gray; margin-bottom: 2%">
                                 <div class="offset-1 col-4">
