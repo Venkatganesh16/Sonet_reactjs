@@ -1,0 +1,4 @@
+addEventListener spelling in line 85 and 93
+Math.floor(Math.random()*100) + 1; line 44 and 113
+lowOrHi.textContent = ''; in else if(guessCount === 10) block
+line 48 .lowOrHi
