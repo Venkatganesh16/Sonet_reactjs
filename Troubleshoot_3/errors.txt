@@ -1,0 +1,12 @@
+-> display none in line 35
+
+-> //enable submit button here 
+ function toggleButton(ref, btn) {
+     document.getElementById(btn).disabled = false;
+ }
+
+-> //listeners to be added here
+    form1.addEventListener("submit", addItem);
+    items.addEventListener("click", removeItem);
+
+-> addItem spelling in line 15
