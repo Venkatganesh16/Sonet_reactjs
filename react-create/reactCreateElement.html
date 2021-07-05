@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React- createHTML</title>
+    <style>
+        .hero {
+            border: 2px solid black;
+            border-radius: 10px;
+            background-color: antiquewhite;
+            width: 25%;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+
+    <h1>React code --creating element</h1>
+    <div id="global1">
+
+    </div>
+    <div id="global2">
+
+    </div>
+    <div id="global3">
+
+    </div>
+
+    <script>
+        const title = React.createElement('h1', {}, 'My React Code');
+        ReactDOM.render(title,document.getElementById('global1'));
+        
+        const title1 = React.createElement('h1', {}, 'My React Code');
+        const paragraph = React.createElement('p',{},'writing para in a p tag');
+        const container = React.createElement('div',{},[title1, paragraph]);
+        ReactDOM.render(container,document.getElementById('global2'));
+
+        const list = React.createElement(
+            'div',{},React.createElement('h1',{},'My Super heroes'),
+            React.createElement('ul',{class:'hero'},
+            [
+                React.createElement('li',{},'IronMan'),
+                React.createElement('li',{},'Thor'),
+                React.createElement('li',{},'CaptainAmerica'),
+                React.createElement('li',{},'Hulk')
+            ])
+        );
+        ReactDOM.render(list,document.getElementById('global3'));
+    </script>
+</body>
+</html>
