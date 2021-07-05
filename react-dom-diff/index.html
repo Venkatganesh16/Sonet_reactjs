@@ -6,20 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>React DOM Diff</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body>
-    <h2>Checking the React and Non React Difference</h2>
-
-    <!--Non React Div-->
-    <!--start here-->
-    <div id="dateJS"></div>
-    <!--non ends here-->
-
-    <!--React Div-->
-    <!--start here-->
-    <div id="dateReact"></div>
-    <!--ends here-->
-
+    <nav class="navbar">
+        <a class="navbar-brand"><b>VirtaulDOM-RealDom - DigitalClock</b></a>
+      </nav>
+    <div class="row">
+        <div class="col-6">
+            <div id="dateJS"></div>
+        </div>
+        <div class="col-6">
+            <div id="dateReact"></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
     <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
