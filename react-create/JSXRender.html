@@ -15,5 +15,13 @@
         const elem = <h1> Hello World </h1>;
         ReactDOM.render(elem,document.getElementById('root'));
     </script>-->
+    <script type="text/babel">
+        function Sum(props) {
+            return <h1>
+                    {props.a} + {props.b} = {props.a + props.b}
+                </h1>;
+        }
+        ReactDOM.render(<Sum a={5} b={2}/>, document.getElementById("root"));
+    </script>
 </body>
 </html>
